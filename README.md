@@ -10,8 +10,8 @@ KKuTu-Proxy is a app that proxies all WS requests, especially designed for [KKuT
 
 # HTTP to HTTPS Redirect
 1. Of course, Enable HTTPS on the app.js configuration.
-1. If required, [change](https://github.com/hatty163/KKuTu-Proxy/blob/master/app.js#L38) the port number(s) on line 38~39.
-1. Change lines 88~99 on [KKuTu/Server/lib/Web/main.js](https://github.com/JJoriping/KKuTu/blob/master/Server/lib/Web/main.js#L88) to below:
+2. If required, [change](https://github.com/hatty163/KKuTu-Proxy/blob/master/app.js#L38) the port number(s) on line 38~39.
+3. Change lines 88~99 on [KKuTu/Server/lib/Web/main.js](https://github.com/JJoriping/KKuTu/blob/master/Server/lib/Web/main.js#L88) to below:
 ```js
 Server.use((req, res, next) => {
   if(req.protocol == 'http') {
@@ -20,8 +20,8 @@ Server.use((req, res, next) => {
   }
 });
 ```
-1. Restart your KKuTu Web Serer and the program.
-1. Done!
+4. Restart your KKuTu Web Serer and the program.
+5. Done!
 
 # Contributing
 If you think something important is missing or should be different based on your experience, I'd love to hear it!
